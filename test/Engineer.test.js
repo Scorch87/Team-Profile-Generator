@@ -3,7 +3,7 @@ const Engineer = require("../lib/Engineer");
 
 describe("Engineer", ()=>{
     describe("Initialization", ()=>{
-        it("describe functionality...",()=>{
+        it("should return an object containing name, id, email, and github properties when called with the 'new keyword",()=>{
             // logic for testing
 
             expect("")toEqual();

@@ -1,15 +1,15 @@
-// const inquirer = require('inquirer');
-import inquirer from 'inquirer';
-// const fs = require('fs')
-import fs from 'fs';
-// const Employee = require('./lib/Employee');
-import Employee from './lib/Employee.js';
-// const Manager = require('./lib/Manager');
-import Manager from './lib/Manager.js';
-// const Engineer = require('./lib/Engineer');
-import Engineer from './lib/Engineer.js';
-// const Intern = require('./lib/Intern');
-import Intern from './lib/Intern.js';
+const inquirer = require('inquirer');
+// import inquirer from 'inquirer';
+const fs = require('fs')
+// import fs from 'fs';
+const Employee = require('./lib/Employee');
+// import Employee from './lib/Employee.js';
+const Manager = require('./lib/Manager');
+// import Manager from './lib/Manager.js';
+const Engineer = require('./lib/Engineer');
+// import Engineer from './lib/Engineer.js';
+const Intern = require('./lib/Intern');
+// import Intern from './lib/Intern.js';
 
 
 const buildData = [];

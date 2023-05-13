@@ -1,15 +1,10 @@
 const inquirer = require('inquirer');
-// import inquirer from 'inquirer';
 const fs = require('fs')
-// import fs from 'fs';
 const Employee = require('./lib/Employee');
-// import Employee from './lib/Employee.js';
 const Manager = require('./lib/Manager');
-// import Manager from './lib/Manager.js';
 const Engineer = require('./lib/Engineer');
-// import Engineer from './lib/Engineer.js';
 const Intern = require('./lib/Intern');
-// import Intern from './lib/Intern.js';
+
 
 
 const buildData = [];
@@ -222,43 +217,46 @@ const inquirerMenu = ()=>{
     })
 }
 
-const appendTeamData = (data)=>{
-    for(var i = 0; i < buildData.length; i++){
-        var contentContainer = document.querySelector('#container');
-        //add a div with class of card
-        var employeeCard = document.createElement('div');
-        employeeCard.classList.add('card');
-        // add an h2 with id of name
-        var employeeName = document.createElement('h2');
-        employeeName.textContent = data[i].Employee.name;
-        var employeeRole = document.createElement('h2');
-        employeeRole.textContent = data[i+1];
-        // add a div with an id of job-title
-        var jobDiv = document.createElement('div');
-        jobDiv.setAttribute('id', 'job-title');
-        // add a ul element
-        var ulEl = document.createElement('ul');
-        // add a li with an id of id
-        var idEl = document.createElement('li');
-        idEl.textContent = data[i].Employee.id;
-        // add a li with an id of email
-        var emailEl = document.createElement('li');
-        emailEl.textContent = data[i].Employee.email;
-        // add a li with an id of info
-        var infoEl = document.createElement('li');
-        if(data[i]===Manager){
-            infoEl.textContent = data[i].officeNumber;
-        } else if(data[i]===Engineer){
-            infoEl.textContent = data[i].github;
-        } else if(data[i]===Intern){
-            infoEl.textContent = data[i].school;
-        }
-        employeeCard.append(employeeName, employeeRole, jobDiv, ulEl, idEl, emailEl, infoEl);
-        contentContainer.append(employeeCard);
-    }
-}
+// this function may or may not work, currently unable to get this script to run on the html page without a server.
+// this could be good for future development.
 
-appendTeamData(buildData);
+// const appendTeamData = (data)=>{
+//     for(var i = 0; i < buildData.length; i++){
+//         var contentContainer = document.querySelector('#container');
+//         //add a div with class of card
+//         var employeeCard = document.createElement('div');
+//         employeeCard.classList.add('card');
+//         // add an h2 with id of name
+//         var employeeName = document.createElement('h2');
+//         employeeName.textContent = data[i].Employee.name;
+//         var employeeRole = document.createElement('h2');
+//         employeeRole.textContent = data[i+1];
+//         // add a div with an id of job-title
+//         var jobDiv = document.createElement('div');
+//         jobDiv.setAttribute('id', 'job-title');
+//         // add a ul element
+//         var ulEl = document.createElement('ul');
+//         // add a li with an id of id
+//         var idEl = document.createElement('li');
+//         idEl.textContent = data[i].Employee.id;
+//         // add a li with an id of email
+//         var emailEl = document.createElement('li');
+//         emailEl.textContent = data[i].Employee.email;
+//         // add a li with an id of info
+//         var infoEl = document.createElement('li');
+//         if(data[i]===Manager){
+//             infoEl.textContent = data[i].officeNumber;
+//         } else if(data[i]===Engineer){
+//             infoEl.textContent = data[i].github;
+//         } else if(data[i]===Intern){
+//             infoEl.textContent = data[i].school;
+//         }
+//         employeeCard.append(employeeName, employeeRole, jobDiv, ulEl, idEl, emailEl, infoEl);
+//         contentContainer.append(employeeCard);
+//     }
+// }
+
+// appendTeamData(buildData);
 
 
 
